@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment.2</title>
+    
+</head>
+<style>
+  body {
+    background-color: palegreen;
+    text-align:center;
+    }
+    button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: center;
+
+        }
+</style>
+<body>
+  <h2>Survey form</h2>
+  <hr>
+    <form action="backend.php" >
+      Enter Your Details*:
+        <br>
+        <br>
+        <div>
+            <label for="name">First Name*:</label>
+            <input type="name" name="myfirstname" id="firstname"required>
+        </div>
+        <br>
+          <div>
+            <label for="name">Last Name*:</label>
+            <input type="name" name="mylastname" id="lastname"required>
+              </div>
+        <hr>
+        Address:
+        <br>
+        <br>
+          <div>
+            <label for="address">Street*:</label>
+            <input type="address" name="mystreet" id="street"required>
+        </div>
+        <br>
+        <div>
+            <label for="address">City*:</label>
+            <input type="address" name="mycity" id="city"required>
+        </div>
+        <br>
+        <div>
+            <label for="address">State*:</label>
+            <input type="address" name="mystate" id="state"required>
+        </div>
+        <br>
+        <div>
+            <label for="pin">Pincode*:</label>
+            <input type="number" name="Mypincode" id="pincode"required>    
+        </div>
+        <hr>
+          <div>
+            <label for="contact">Contact Number*:</label>
+            <input type="number" name="Mycontact" id="contact"required>    
+        </div>
+<hr>
+  <p>Quality of product received*: </p>
+  <label for= "exc">Excellent: </label>
+  <input type="radio" name="quality_of_products_received_rating" class="exc"required>
+    <label for= "good">Good: </label>
+  <input type="radio" name="quality_of_products_received_rating" class="good"required>
+    <label for= "bad">Bad: </label>
+  <input type="radio" name="quality_of_products_received_rating" class="bad"required>
+    
+  <p>Value for money*: </p>
+  <label for= "exc">Excellent: </label>
+  <input type="radio" name="value_for_money" class="exc"required>
+    <label for= "good">Good: </label>
+  <input type="radio" name="value_for_money" class="good"required>
+    <label for= "bad">Bad: </label>
+  <input type="radio" name="value_for_money" class="bad"required>
+    
+  <p>Delivery*: </p>
+  <label for= "exc">Excellent: </label>
+  <input type="radio" name="delivery" class="exc"required>
+    <label for= "good">Good: </label>
+  <input type="radio" name="delivery" class="good"required>
+    <label for= "bad">Bad: </label>
+  <input type="radio" name="delivery" class="bad"required>
+   <hr>
+  
+   <button type="submit">
+    <text-align>submit</text-align>
+</button>
+    </form>
+          
