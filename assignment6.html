@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    text-align: center;
+    background-image: url(https://static4.depositphotos.com/1000715/384/i/950/depositphotos_3842728-stock-photo-room-with-brick-wall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-size: 10ch;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:darkred;
+    background-color:bisque;
+}
+.strt-btn{
+    padding: 25px 65px;
+    background: rgb(150, 247, 4);
+    color: #fff;
+    font-weight:700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 5ch;
+}
+#text{
+    color: yellow;
+    font-size: 3ch;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition-delay: 1s ;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    transition-duration: 1s;
+}
+    </style>
+</head>
+<body>
+    <h1>GUESS THE NUMBER GAME !!!</h1>
+    <button onclick="game()" class="strt-btn">Start Game</button>
+    <p id="text"></p>
+    <script>
+        function game(){
+            input=prompt("Enter a number between 1 and 100.");
+            let sum="";
+            if(input>=0 && input<=100)
+            {
+                let i,obj;
+                for(i=0,obj=[];i<5;i++)
+                {
+                    sum+="COMPUTER GUESSED "+Math.round(Math.random()*100) + "<br><br>";
+                    obj[i]=sum;
+                }
+                for(let j=0;j<5;j++)
+                {
+                    if(input==obj[j])
+                    {
+                        sum+="COMPUTER WINS! BETTER LUCK NEXT TIME !!";
+                        break;
+                    }
+                    else
+                    {
+                        sum+="YOU WON !!!";
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                sum="Invalid input";
+            }
+            document.getElementById("text").innerHTML=sum;
+        }
+    </script>
+</body>
+</html>
